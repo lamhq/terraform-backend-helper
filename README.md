@@ -2,8 +2,11 @@
 
 ## About
 
-This repository simplifies the process of creating and managing the necessary resources for setting up a Terraform backend with S3.
+This repository simplifies the process of creating and managing the necessary resources for AWS projects.
 
+The created resources include:
+- An S3 bucket for storing Terraform states, deployed code, dependencies, ...
+- A DynamoDB table for Terraform state locking
 
 ## Usage
 
@@ -12,12 +15,18 @@ This repository simplifies the process of creating and managing the necessary re
     owner = ""
     region = ""
     ```
-2. Use `terraform apply` command to automatically create necessary AWS resources for Terraform s3 backend, including an S3 bucket
-3. Look for the bucket name in the console output
+2. Use `terraform apply` command to automatically create necessary AWS resources
+3. Look for created resources in the console output
 
 
 ## Frequently Used Commands
 
+Preview changes:
+```shell
+terraform plan -var-file="params.tfvars"
+```
+
+Deploy:
 ```shell
 terraform apply -var-file="params.tfvars" --auto-approve
 ```
