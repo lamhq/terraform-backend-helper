@@ -2,14 +2,14 @@
 
 ## About
 
-This repository simplifies the process of creating and managing the necessary resources for AWS projects.
+This repository simplifies the process of creating and managing the necessary resources for Terraform S3 backend.
 
 The created resources include:
 - An S3 bucket for storing Terraform states, deployed code, dependencies, ...
 - A DynamoDB table for Terraform state locking
 
-## Usage
 
+## Usage
 1. Prepare a `params.tfvars` file that contain required input parameters:
     ```hcl filename="params.tfvars"
     owner = ""
