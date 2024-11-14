@@ -10,23 +10,23 @@ The created resources include:
 
 
 ## Usage
-1. Prepare a `params.tfvars` file that contain required input parameters:
-    ```hcl filename="params.tfvars"
-    owner = ""
-    region = ""
-    ```
-2. Use `terraform apply` command to automatically create necessary AWS resources
-3. Look for created resources in the console output
 
-
-## Frequently Used Commands
-
-Preview changes:
-```shell
-terraform plan -var-file="params.tfvars"
+Prepare a `params.tfvars` file that contain required input parameters:
+```hcl filename="params.tfvars"
+owner = ""
+region = ""
 ```
 
-Deploy:
+Use these commands to automatically create resources:
 ```shell
+terraform init -reconfigure
 terraform apply -var-file="params.tfvars" --auto-approve
+```
+
+Look for created resources in the console output.
+```
+Outputs:
+
+bucket_name = "..."
+dynamodb_table_name = "..."
 ```
