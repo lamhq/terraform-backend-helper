@@ -1,4 +1,4 @@
-# create a random name for the bucket
+# create a random name for the table
 resource "random_pet" "state_lock_table_name" {
   prefix    = "tf-state-lock-table"
   length    = 1
@@ -19,7 +19,8 @@ resource "aws_dynamodb_table" "state_lock_table" {
   }
 }
 
+# output the table name
 output "dynamodb_table_name" {
-  description = "Name of a DynamoDB table to use for Terraform state locking"
+  description = "Name of the DynamoDB table used for Terraform state locking"
   value = aws_dynamodb_table.state_lock_table.name
 }

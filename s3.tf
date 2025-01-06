@@ -27,6 +27,7 @@ resource "aws_s3_bucket_acl" "tf_states_bucket_acl" {
   acl = "private"
 }
 
+# output the bucket name
 output "bucket_name" {
   description = "The S3 bucket for storing Terraform state of all projects"
   value = aws_s3_bucket.tf_states_bucket.bucket

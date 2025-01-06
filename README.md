@@ -2,12 +2,11 @@
 
 ## About
 
-This repository simplifies the process of creating and managing the necessary resources for Terraform S3 backend.
+This repository simplifies the creation and management of necessary resources for Terraform S3 backend in AWS.
 
-The created resources include:
-- An S3 bucket for storing Terraform states, deployed code, dependencies, ...
+The resources created include:
+- An S3 bucket for storing Terraform states of multiple projects
 - A DynamoDB table for Terraform state locking
-
 
 ## Usage
 
@@ -31,7 +30,7 @@ bucket_name = "..."
 dynamodb_table_name = "..."
 ```
 
-To view previously generated resources, run:
+To view previously created resources, run:
 ```shell
 terraform output
 ```

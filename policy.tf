@@ -5,7 +5,6 @@ resource "aws_iam_policy" "tf_backend_policy" {
   policy = jsonencode({
     Version = "2012-10-17"
     Statement = [
-      # manage terraform's stuff
       {
         "Effect" : "Allow",
         "Action" : ["s3:ListBucket"],
@@ -36,6 +35,7 @@ resource "aws_iam_policy" "tf_backend_policy" {
   })
 }
 
+# output the policy's ARN
 output "policy_arn" {
   description = "ARN of IAM policy for managing Terraform backend resources on AWS"
   value = aws_iam_policy.tf_backend_policy.arn
