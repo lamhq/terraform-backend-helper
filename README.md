@@ -12,7 +12,7 @@ The created resources include:
 ## Usage
 
 Prepare a `input.tfvars` file that contain required input parameters:
-```hcl filename="params.tfvars"
+```hcl filename="input.tfvars"
 owner = ""
 aws_region = ""
 ```
@@ -29,4 +29,9 @@ Outputs:
 
 bucket_name = "..."
 dynamodb_table_name = "..."
+```
+
+To view previously generated resources, run:
+```shell
+terraform output
 ```
