@@ -10,8 +10,8 @@ The resources created include:
 
 ## Usage
 
-Prepare a `input.tfvars` file that contain required input parameters:
-```hcl filename="input.tfvars"
+Prepare a `params.tfvars` file that contain required input parameters:
+```hcl filename="params.tfvars"
 owner = ""
 aws_region = ""
 ```
@@ -19,7 +19,7 @@ aws_region = ""
 Use these commands to automatically create resources:
 ```shell
 terraform init -reconfigure
-terraform apply -var-file="input.tfvars" --auto-approve
+terraform apply -var-file="params.tfvars" --auto-approve
 ```
 
 Look for created resources in the console output.
